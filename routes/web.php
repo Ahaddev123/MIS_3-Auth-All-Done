@@ -41,3 +41,5 @@ Route::middleware(['auth', 'role:management'])->group(function(){
     Route::get('/management/dashboard', [ManagementController::class, 'ManagementDashboard'])->name(
         'management.dashboard');
 }); // End Group Management Middleware
+
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.logoin');
